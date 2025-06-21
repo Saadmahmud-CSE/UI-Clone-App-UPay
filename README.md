@@ -32,7 +32,7 @@ A fully functional clone of the popular UPay mobile app, built using **Java** an
 |-----------------------|-----------------------|
 | ![Input](screenshots/Account-01.png) | ![Result](screenshots/Account-02.png) |
 
-|   UPay Offers Screen-01  |   UPay Offers Screen-02  |   UPay Offers Screen-03   |   UPay Offers Screen-04   |   UPay Offers Screen-05  |   UPay Offers Screen-06  |   UPay Offers Screen-06  |
+|   UPay Offers Screen-01  |   UPay Offers Screen-02  |   UPay Offers Screen-03   |   UPay Offers Screen-04   |   UPay Offers Screen-05  |   UPay Offers Screen-06  |   UPay Offers Screen-07  |
 |--------------------------|--------------------------|---------------------------|---------------------------|--------------------------|--------------------------|--------------------------|
 | ![Input](screenshots/Offers-01.png) | ![Result](screenshots/Offers-02.png) | ![Result](screenshots/Offers-03.png) | ![Result](screenshots/Offers-04.png) |  ![Result](screenshots/Offers-05.png) | ![Result](screenshots/Offers-06.png) | ![Result](screenshots/Offers-07.png) |
 
@@ -54,7 +54,7 @@ A fully functional clone of the popular UPay mobile app, built using **Java** an
 
 ## 🎥 Demo Video
 
-[Click here to watch the project demo video](https://drive.google.com/file/d/1WKWHNUaSaQ8-A_Zfz9ELpYOg8BIM_5Zl/view?usp=drive_link)
+[!Watch the Project Demo Video](https://drive.google.com/file/d/1WKWHNUaSaQ8-A_Zfz9ELpYOg8BIM_5Zl/view?usp=drive_link)
 
 ---
 
