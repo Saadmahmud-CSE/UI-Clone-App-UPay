@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary branding colors -->
+    <color name="upay_primary">#005B9F</color>          <!-- Main Blue -->
+    <color name="upay_primary_dark">#004B87</color>     <!-- Darker Blue -->
+    <color name="upay_accent">#FFD700</color>           <!-- Bright Gold (Accent) -->
+
+    <!-- Supporting colors -->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#000000</color>
+    <color name="gray">#888</color>
+    <color name="upay_text_blue">#004B87</color>        <!-- Text Blue -->
+    <color name="upay_text_yellow">#FFD700</color>      <!-- Text Yellow -->
+
+    <!-- Backgrounds -->
+    <color name="upay_background">#FFEB3B</color>       <!-- Splash Yellow BG -->
+    <color name="upay_navbar">#fffff7</color>           <!-- Optional navbar color -->
+
+    <!-- Status Bar and Nav -->
+    <color name="transparent">#00000000</color>
+</resources>

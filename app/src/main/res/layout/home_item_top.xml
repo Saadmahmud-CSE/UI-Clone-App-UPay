@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:padding="8dp">
+
+    <ImageView
+        android:id="@+id/topIcon"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/topTitle"
+        android:src="@drawable/ic_send_money" />
+
+    <TextView
+        android:id="@+id/topTitle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Send Money"
+        android:fontFamily="sans-serif-medium"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:textColor="#2C2C2C"
+        app:layout_constraintTop_toBottomOf="@id/topIcon"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+</androidx.constraintlayout.widget.ConstraintLayout>

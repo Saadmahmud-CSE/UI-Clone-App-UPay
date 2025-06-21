@@ -1,0 +1,274 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <!-- Scrollable Content -->
+    <androidx.core.widget.NestedScrollView
+        android:id="@+id/scrollView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:clipToPadding="false"> <!-- Padding bottom to avoid being hidden -->
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            tools:context=".ui.home.HomeFragment">
+
+            <!-- Top Header -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/topHeader"
+                android:paddingTop="30dp"
+                android:layout_width="match_parent"
+                android:layout_height="130dp"
+                android:background="@color/upay_accent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <!-- Your Profile Image, Name, Phone, and Balance Button code here (unchanged) -->
+                <ImageView
+                    android:id="@+id/imgProfile"
+                    android:layout_width="85dp"
+                    android:layout_height="75dp"
+                    android:layout_marginStart="16dp"
+                    android:layout_marginTop="8dp"
+                    android:src="@drawable/logo"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.357" />
+
+                <TextView
+                    android:id="@+id/tvName"
+                    android:layout_width="160dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="10dp"
+                    android:layout_marginTop="8dp"
+                    android:ellipsize="end"
+                    android:maxLines="1"
+                    android:text="Mohammad Saad Uddin Chowdhury"
+                    android:textColor="@android:color/black"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toStartOf="@+id/btnBalance"
+                    app:layout_constraintHorizontal_bias="0.107"
+                    app:layout_constraintStart_toEndOf="@+id/imgProfile"
+                    app:layout_constraintTop_toTopOf="@+id/imgProfile" />
+
+                <TextView
+                    android:id="@+id/tvPhone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="4dp"
+                    android:text="01877616047"
+                    android:textColor="@android:color/black"
+                    android:textSize="14sp"
+                    app:layout_constraintEnd_toEndOf="@id/tvName"
+                    app:layout_constraintHorizontal_bias="0.0"
+                    app:layout_constraintStart_toStartOf="@id/tvName"
+                    app:layout_constraintTop_toBottomOf="@id/tvName" />
+
+                <Button
+                    android:id="@+id/btnBalance"
+                    android:layout_width="wrap_content"
+                    android:layout_height="40dp"
+                    android:layout_marginEnd="16dp"
+                    android:background="@drawable/rounded"
+                    android:text="Balance"
+                    android:gravity="top|center"
+                    android:fontFamily="sans-serif-medium"
+                    android:textAllCaps="false"
+                    android:textColor="@android:color/white"
+                    android:textSize="14sp"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintHorizontal_bias="1.0"
+                    app:layout_constraintStart_toEndOf="@+id/imgProfile"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintVertical_bias="0.716" />
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Top RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerTop"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                app:layout_constraintTop_toBottomOf="@id/topHeader"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <!-- Banner Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/bannerLayout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="#F6F6F6"
+                app:layout_constraintTop_toBottomOf="@id/recyclerTop"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent">
+
+                <androidx.viewpager2.widget.ViewPager2
+                    android:id="@+id/viewPagerBanner"
+                    android:layout_width="match_parent"
+                    android:layout_height="100dp"
+                    android:layout_marginBottom="8dp"
+                    app:layout_constraintBottom_toTopOf="@+id/dots_indicator"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <com.saad.cse.upay.BalloonIndicatorView
+                    android:id="@+id/dots_indicator"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    app:dotsColor="#888"
+                    app:selectedDotColor="@color/upay_primary_dark"
+                    app:layout_constraintTop_toBottomOf="@id/viewPagerBanner"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toEndOf="parent"/>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Upay Payments Title -->
+            <TextView
+                android:id="@+id/tv_upay_payments"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:background="#F6F6F6"
+                android:gravity="center|start"
+                android:text="   upay Payments"
+                android:textColor="@color/upay_text_blue"
+                android:textSize="14sp"
+                app:layout_constraintTop_toBottomOf="@id/bannerLayout"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <!-- Upay Payments RecyclerView -->
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerUpayPayments"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_upay_payments"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+            <TextView
+                android:id="@+id/tv_other_services"
+                android:layout_width="match_parent"
+                android:layout_height="30dp"
+                android:gravity="center|start"
+                android:background="#F6F6F6"
+                android:text="   Other Services"
+                android:textColor="@color/upay_text_blue"
+                android:textSize="14sp"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/recyclerUpayPayments" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recyclerOtherServices"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:background="@color/white"
+                android:clipToPadding="false"
+                app:layout_constraintTop_toBottomOf="@id/tv_other_services"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.core.widget.NestedScrollView>
+
+    <!-- Floating Card Section in the Middle -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/cardReferSection"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingBottom="20dp"
+        android:layout_gravity="bottom">
+
+        <!-- Prepaid Card -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnPrepaidCard"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:layout_marginEnd="25dp"
+            android:background="@drawable/bg_prepaid"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toStartOf="@+id/btnReferEarn"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <TextView
+                android:id="@+id/txtCard"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:fontFamily="sans-serif"
+                android:gravity="end"
+                android:text="Prepaid\nCard"
+                android:textColor="#2C2C2C"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <ImageView
+                android:id="@+id/iconCard"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:paddingEnd="10dp"
+                android:src="@drawable/ic_prepaidcard"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+        <!-- Refer & Earn -->
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/btnReferEarn"
+            android:layout_width="0dp"
+            android:layout_height="60dp"
+            android:background="@drawable/bg_refer"
+            android:layout_marginStart="25dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/btnPrepaidCard"
+            app:layout_constraintTop_toTopOf="parent">
+
+            <ImageView
+                android:id="@+id/iconRefer"
+                android:layout_width="60dp"
+                android:layout_height="wrap_content"
+                android:paddingStart="15dp"
+                android:src="@drawable/ic_refer"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+            <TextView
+                android:id="@+id/txtRefer"
+                android:layout_width="110dp"
+                android:layout_height="wrap_content"
+                android:fontFamily="sans-serif"
+                android:gravity="start"
+                android:text="Refer &amp;\nEarn"
+                android:textColor="#2C2C2C"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                app:layout_constraintBottom_toBottomOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+        </androidx.constraintlayout.widget.ConstraintLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</FrameLayout>

@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BalloonIndicatorView">
+        <attr name="dotColor" format="color" />
+        <attr name="selectedDotColor" format="color" />
+        <attr name="dotRadius" format="dimension" />
+        <attr name="dotSpacing" format="dimension" />
+        <attr name="balloonSizeFactor" format="float" />
+    </declare-styleable>
+</resources>

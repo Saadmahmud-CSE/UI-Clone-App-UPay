@@ -1,0 +1,4 @@
+<!-- dimens.xml -->
+<resources>
+    <dimen name="wallet_grid_spacing">8dp</dimen>
+</resources>

@@ -1,0 +1,40 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:padding="8dp"
+    android:layout_marginTop="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+    <TextView
+        android:id="@+id/creditTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Linked Credit Cards"
+        android:textSize="20sp"
+        android:textColor="@color/black"
+        android:fontFamily="sans-serif-medium" />
+
+    <TextView
+        android:id="@+id/creditSub"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="(UCB only)"
+        android:textSize="20sp"
+        android:textColor="#868686"
+        android:fontFamily="sans-serif" />
+
+    <TextView
+        android:id="@+id/link"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text="+ Link"
+        android:gravity="end"
+        android:paddingEnd="8dp"
+        android:textSize="20sp"
+        android:textColor="#044BAB"
+        android:fontFamily="sans-serif-medium" />
+</LinearLayout>

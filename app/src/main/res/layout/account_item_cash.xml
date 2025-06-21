@@ -1,0 +1,54 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="150dp"
+    android:orientation="vertical"
+    android:background="@drawable/bg_cash_reward"
+    android:padding="8dp">
+
+    <!-- Top row: Icon, Title, Amount -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <ImageView
+            android:id="@+id/rewardIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_cash_reward" />
+
+        <TextView
+            android:id="@+id/rewardTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="2dp"
+            android:layout_weight="1"
+            android:text="Cash Reward"
+            android:textSize="18sp"
+            android:textColor="#044BAB"
+            android:fontFamily="sans-serif-medium" />
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="৳ 20.00"
+            android:paddingEnd="20dp"
+            android:textSize="18sp"
+            android:textColor="#044BAB"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>
+
+    <!-- Bottom row: Description -->
+    <TextView
+        android:id="@+id/rewardDescription"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="2dp"
+        android:layout_marginLeft="8dp"
+        android:fontFamily="sans-serif"
+        android:text="Check your available rewards"
+        android:textColor="#7E9CB1"
+        android:textSize="16sp" />
+</LinearLayout>

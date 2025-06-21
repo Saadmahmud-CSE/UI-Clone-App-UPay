@@ -1,0 +1,35 @@
+<LinearLayout android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="horizontal"
+    android:gravity="center_vertical"
+    android:background="@color/white"
+    android:padding="12dp"
+    android:layout_marginTop="8dp"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+        <ImageView
+            android:id="@+id/preIcon"
+            android:layout_width="50dp"
+            android:layout_height="50dp"
+            android:src="@drawable/ic_prepaidcard" />
+
+        <TextView
+            android:id="@+id/preTitle"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:paddingStart="12dp"
+            android:layout_weight="1"
+            android:text="Prepaid Card"
+            android:textSize="18sp"
+            android:textColor="@color/black"
+            android:fontFamily="sans-serif" />
+
+        <TextView
+            android:id="@+id/req"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="+ Request"
+            android:textSize="20sp"
+            android:textColor="#044BAB"
+            android:fontFamily="sans-serif-medium" />
+    </LinearLayout>

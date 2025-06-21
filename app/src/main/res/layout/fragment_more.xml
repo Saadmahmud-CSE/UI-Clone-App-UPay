@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <!-- SETTINGS Label -->
+        <TextView
+            android:id="@+id/textSettings"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:background="#ebebeb"
+            android:text="SETTINGS"
+            android:textStyle="bold"
+            android:textColor="#888"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toTopOf="@id/settingsRecyclerView"/>
+
+        <!-- SETTINGS RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/settingsRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/textSettings"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- UPAY SUPPORT Label -->
+        <TextView
+            android:id="@+id/textUpay"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:background="#ebebeb"
+            android:text="UPAY SUPPORT"
+            android:textStyle="bold"
+            android:textColor="#888"
+            app:layout_constraintTop_toBottomOf="@id/settingsRecyclerView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- UPAY RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/upayRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/textUpay"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ACCOUNT SERVICES Label -->
+        <TextView
+            android:id="@+id/textAccount"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:background="#ebebeb"
+            android:text="ACCOUNT SERVICES"
+            android:textStyle="bold"
+            android:textColor="#888"
+            app:layout_constraintTop_toBottomOf="@id/upayRecyclerView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- ACCOUNT RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/accountRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/textAccount"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- POLICIES Label -->
+        <TextView
+            android:id="@+id/textPolicies"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:padding="16dp"
+            android:textSize="16sp"
+            android:background="#ebebeb"
+            android:text="POLICIES"
+            android:textStyle="bold"
+            android:textColor="#888"
+            app:layout_constraintTop_toBottomOf="@id/accountRecyclerView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- POLICIES RecyclerView -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/policiesRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/textPolicies"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+        <!-- LOGOUT RecyclerView (without label) -->
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/logoutRecyclerView"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:background="#888"
+            android:clipToPadding="false"
+            app:layout_constraintTop_toBottomOf="@id/policiesRecyclerView"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</androidx.core.widget.NestedScrollView>

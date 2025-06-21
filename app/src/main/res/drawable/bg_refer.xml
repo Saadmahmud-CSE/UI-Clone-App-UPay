@@ -1,0 +1,5 @@
+<shape xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="rectangle">
+    <solid android:color="#fdf5d1" /> <!-- Light cream -->
+    <corners android:bottomLeftRadius="50dp" android:topLeftRadius="50dp" />
+</shape>
