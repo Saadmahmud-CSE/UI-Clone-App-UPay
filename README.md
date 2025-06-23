@@ -54,7 +54,7 @@ A fully functional clone of the popular UPay mobile app, built using **Java** an
 
 ## 🎥 Demo Video
 
-[[! Watch the Project Demo Video](https://img.youtube.com/vi/bbUauPiLbo4/0.jpg)](https://youtu.be/bbUauPiLbo4)
+[![Watch the Project Demo Video](https://img.youtube.com/vi/bbUauPiLbo4/0.jpg)](https://youtu.be/bbUauPiLbo4)
 
 ---
 
